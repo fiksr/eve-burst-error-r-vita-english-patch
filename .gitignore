@@ -1,0 +1,16 @@
+# Ignore game dumps and archives
+*.psarc
+*.psarc.*
+*.zip
+*.7z
+*.rar
+*.tar.gz
+
+# Temporary files
+*.tmp
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
+Thumbs.db
