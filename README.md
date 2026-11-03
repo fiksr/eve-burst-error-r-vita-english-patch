@@ -2,11 +2,17 @@
 
 **Title ID:** `PCSG00817`  
 **Platform:** PlayStation Vita / Vita3K (Windows, Android, Linux, macOS, Steam Deck)  
-**Patch Version:** 1.2 (Pixel-Perfect Settings & Controls Polish)
+**Patch Version:** 1.3 (Complete Investigation & Command Menu Localization)
 
 ---
 
 ## Changelog
+
+### v1.3
+- **Comprehensive Command Button Localization (All 525 Buttons):** 100% of all in-game investigation choices, sub-actions, targets, and inquiry options across all 8 command texture sheets (`cmd2_1`, `cmd2_2`, `cmd2_3`, `cmd2_4`, `cmd2_5`, `cmd2_6a`, `cmd2_6b`, and `cmd3`) are now fully localized into English.
+- **Root Cause Resolution for Investigation Menus:** Decoded the engine's 2-column button layout architecture and Gojūon alphabetical indexing. Fixed missing sub-action buttons (e.g. `Go outside` on Move, `About the case`, `Amagi Detective Offices`, `About the Chief`).
+- **Official PC-98 English Parity:** Sourced 504 out of 522 buttons (96.6%) directly from the official PC-98 translation memory, with the remaining remaster/console-exclusive buttons translated and styled with 1:1 drop-shadowed typography.
+- **Pixel-Perfect Wiping:** Clean-tiled button interiors preserving the top-left green/gold indicator tabs and angled right bevels across both Normal and Hover states.
 
 ### v1.2
 - **1:1 Settings & Slider Alignment:** Fixed master configuration sheets (`config00.png` + `config00.gxt`) across all 90 control clusters. Restored Window Opacity and RGB window color customization sliders (`Red (R)`, `Green (G)`, `Blue (B)`), separating them from the `Change Color for Read Text` toggle.
