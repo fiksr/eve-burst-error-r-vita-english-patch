@@ -2,7 +2,21 @@
 
 **Title ID:** `PCSG00817`  
 **Platform:** PlayStation Vita / Vita3K (Windows, Android, Linux, macOS, Steam Deck)  
-**Patch Version:** 1.0 (Full Game)
+**Patch Version:** 1.1 (Full Game — Polish & Layout Update)
+
+---
+
+## Changelog
+
+### v1.1
+- **Word-Boundary Dialogue Wrapping:** Re-wrapped all 102 scenario scripts (`44,565` lines) with word-level line boundaries, preventing mid-word hyphenation/splitting (e.g. `cha / nge`).
+- **Full Settings/Config Menu Localization:** Localized remaster HD setting sheets (`config00.png` + `config00.gxt`, `config01.png`), translating Message Window, Screen Effects, Save Settings, Confirmation Prompts, Master/BGM/Voice volume sliders, and all individual character voice selectors.
+- **Pill Toggle Buttons:** Localized all toggle pills (`ON`/`OFF`, `Enable`/`Disable`, `Hold Only`/`Toggle`, `Read Only`/`All Text`, `Gothic`/`Mincho`, `Custom`, `Normal`/`Fast`, `Reset Defaults`, `Voice Test`).
+- **Command Menu Polish:** Cleaned `LOOK / EXAMINE` command texture (`cmd1.png` + `cmd1.gxt`), eliminating stray glyph boundary artifacts.
+- **Decision Sub-Menu Localization:** Localized common decision sub-buttons on `cmd2_1.png` + `cmd2_1.gxt` (`Surroundings`, `Go Outside`, `Akane`, `Camera`, `Table`, `Desk`, `Desk Lamp`).
+
+### v1.0
+- Initial full English translation release for PS Vita & Vita3K.
 
 ---
 
