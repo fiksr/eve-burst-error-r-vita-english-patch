@@ -2,11 +2,18 @@
 
 **Title ID:** `PCSG00817`  
 **Platform:** PlayStation Vita / Vita3K (Windows, Android, Linux, macOS, Steam Deck)  
-**Patch Version:** 1.3 (Complete Investigation & Command Menu Localization)
+**Patch Version:** 1.4 (Main Action Command Bar & System Dialog Localization)
 
 ---
 
 ## Changelog
+
+### v1.4
+- **Parent Action Command Bar (`cmd1.png` + `cmd1.gxt`):** Fully localized all 110 command rows across both Left and Right columns. Parent investigation and situation verbs such as `Act Wildly` (Row 47, unlocking `Dance wildly` & `Fire at random`), `Shoot`, `Punch`, `Kiss`, `Touch`, `Hide`, `Escape`, `Sit`, `Change Clothes`, `Surrender`, `Climb`, etc. are now 100% in English with preserved cyan indicators and question mark hexagon badges.
+- **System Dialog & Prompts (`dialog.png`):**
+  - Localized confirmation buttons (`YES` / `NO`) across both Normal (dark teal) and Active/Hover states (bright cyan glow with arrow indicators).
+  - Localized the persistent reminder checkbox (`Don't show again`) for both Unchecked and Checked states, preserving the PS Vita `(△)` triangle prompt and checkbox icons.
+- **Archive Injection & Distribution:** Rebuilt master archive with 126 replaced assets.
 
 ### v1.3
 - **Comprehensive Command Button Localization (All 525 Buttons):** 100% of all in-game investigation choices, sub-actions, targets, and inquiry options across all 8 command texture sheets (`cmd2_1`, `cmd2_2`, `cmd2_3`, `cmd2_4`, `cmd2_5`, `cmd2_6a`, `cmd2_6b`, and `cmd3`) are now fully localized into English.
