@@ -2,11 +2,20 @@
 
 **Title ID:** `PCSG00817`  
 **Platform:** PlayStation Vita / Vita3K (Windows, Android, Linux, macOS, Steam Deck)  
-**Patch Version:** 1.4 (Main Action Command Bar & System Dialog Localization)
+**Patch Version:** 1.5 (City Map Screen & In-Game System Navigation Bar Localization)
 
 ---
 
 ## Changelog
+
+### v1.5
+- **City Map Screen (`25_uq/map_name.png`):** Localized all 24 location card headers when Kojiro or Marina moves across Tokyo (`Amagi Detective Agency`, `Headquarters Building`, `Inside Headquarters`, `Central Avenue`, `Princess Hotel`, `Sun Mansion`, `Room 402`, `Room 403`, `Katsuragi Det. Agency`, `Inside Katsuragi Agency`, `Ko's House`, `Inside Ko's House`, `Eldia Embassy`, `Inside Embassy`, `International School`, `Inside School`, `Pool`, `Girls' Dorm`, `Kyoko's Room`, `Library`, `Mayako's Room`, `Warehouse District`). Styled with 1:1 bold white typography and original red stroke outline.
+- **In-Game Navigation Bar (`13_sys/System01.png`):** Localized all controller shortcut prompts:
+  - `[L] Prev Page` / `[R] Next Page`
+  - `[Circle] Play Voice`
+  - `[Triangle] Quick Load`
+  - `[Cross] Back`
+- **Master Archive Update:** Rebuilt `data.psarc` with 128 replaced assets.
 
 ### v1.4
 - **Parent Action Command Bar (`cmd1.png` + `cmd1.gxt`):** Fully localized all 110 command rows across both Left and Right columns. Parent investigation and situation verbs such as `Act Wildly` (Row 47, unlocking `Dance wildly` & `Fire at random`), `Shoot`, `Punch`, `Kiss`, `Touch`, `Hide`, `Escape`, `Sit`, `Change Clothes`, `Surrender`, `Climb`, etc. are now 100% in English with preserved cyan indicators and question mark hexagon badges.
