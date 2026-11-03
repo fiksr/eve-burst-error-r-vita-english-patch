@@ -2,11 +2,17 @@
 
 **Title ID:** `PCSG00817`  
 **Platform:** PlayStation Vita / Vita3K (Windows, Android, Linux, macOS, Steam Deck)  
-**Patch Version:** 1.1 (Full Game — Polish & Layout Update)
+**Patch Version:** 1.2 (Pixel-Perfect Settings & Controls Polish)
 
 ---
 
 ## Changelog
+
+### v1.2
+- **1:1 Settings & Slider Alignment:** Fixed master configuration sheets (`config00.png` + `config00.gxt`) across all 90 control clusters. Restored Window Opacity and RGB window color customization sliders (`Red (R)`, `Green (G)`, `Blue (B)`), separating them from the `Change Color for Read Text` toggle.
+- **Confirmation Buttons Fix:** Stamped correct cell coordinates in active highlight sheet (`config01.png`), resolving the bug where confirmation dialog buttons displayed "Kojiro" instead of "Confirm". Stamped `Don't Confirm` and clean style selectors.
+- **Button Interior Clean Sweep:** Re-engineered the 144px button slot wipe (`384..528`, `544..688`, `704..848`) to eliminate all leftover Japanese character strokes while preserving original borders.
+- **Controller Shortcut Footer Localization:** Localized the controller shortcut footer in `config03.png` (`[L]/[R] Switch Tab`, `[START] Reset Defaults`, `[Triangle] Voice Test`, `[Cross] Back`) with clean spacing and transparent backgrounds.
 
 ### v1.1
 - **Word-Boundary Dialogue Wrapping:** Re-wrapped all 102 scenario scripts (`44,565` lines) with word-level line boundaries, preventing mid-word hyphenation/splitting (e.g. `cha / nge`).
