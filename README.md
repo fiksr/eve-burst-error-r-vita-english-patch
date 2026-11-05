@@ -70,6 +70,24 @@ It combines the official PC-98 English translation for all original dialogue wit
 
 ---
 
+## In-Game System Confirmation Dialogs (YES / NO Reference)
+
+All dialogue, scenario text, menus, and choice buttons (`YES` / `NO`) are fully localized in English. The confirmation question sentences above the buttons are hardcoded in the game's executable engine. Use this reference to know exactly what the game is asking:
+
+| Japanese Prompt | Triggered By | What YES Confirms | What NO Does |
+| :--- | :--- | :--- | :--- |
+| **サイトチェンジをします 【小次郎編→まりな編】 よろしいですか？**<br>*(or まりな編→小次郎編)* | **`S.CHANGE`** button<br>*(Right Menu / Screen)* | **YES:** Switches protagonist route (Kojiroh $\leftrightarrow$ Marina) and loads the other story. | **NO:** Cancels switch; stays with the current character. |
+| **クイックセーブします。よろしいですか？** | **`Q.SAVE`** button<br>*(Right Menu)* | **YES:** Saves your exact current progress into the Quick Save slot. | **NO:** Cancels without saving. |
+| **クイックロードします。よろしいですか？** | **`Q.LOAD`** button<br>*(Right Menu)* | **YES:** Discards unsaved progress and restores your Quick Save. | **NO:** Cancels; stays in the current game state. |
+| **タイトルに戻ります。よろしいですか？** | **`TITLE`** button<br>*(Right Menu)* | **YES:** Quits to the Main Menu. Any unsaved progress will be lost. | **NO:** Cancels; resumes gameplay. |
+| **セーブデータを上書きします。よろしいですか？** | Save Menu (Slot Selection) | **YES:** Overwrites the selected save slot with your current game. | **NO:** Cancels; lets you pick another slot. |
+| **セーブデータをロードします。よろしいですか？** | Load Menu (Slot Selection) | **YES:** Loads the selected save file. | **NO:** Cancels; returns to menu. |
+
+> [!NOTE]
+> On the **Side Change** confirmation dialog, checking the bottom checkbox (**`Don't show again`** / `次回から表示しない`) tells the game to remember your preference and switch characters immediately without asking every time.
+
+---
+
 ## Requirements
 
 1. A legal, decrypted copy of **EVE burst error R** (`PCSG00817`).
