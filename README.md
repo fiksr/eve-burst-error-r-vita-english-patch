@@ -110,15 +110,20 @@ All dialogue, scenario text, menus, and choice buttons (`YES` / `NO`) are fully 
 
 ---
 
-### Method B: Real PS Vita Hardware (via rePatch)
+### Method B: Real PS Vita Hardware (Lightweight rePatch — Recommended)
 
-1. Make sure your Vita has CFW (HENkaku / Enso) with the `rePatch` plugin installed.
-2. Follow steps 1–3 above to produce `data_patched.psarc`.
-3. Copy `data_patched.psarc` over USB or FTP to your Vita at:
-   `ux0:rePatch/PCSG00817/data/data.psarc`
-4. Launch the game from LiveArea. The `rePatch` plugin will automatically load the patched English assets without altering your base game.
+> [!TIP]
+> **No 1.1 GB file transfer required! Fully compatible with official Update 1.03 (PKGi / PKGj).**
+
+1. Ensure your PS Vita has custom firmware (HENkaku / Enso) with the **`rePatch`** plugin installed (`rePatch.skprx` in `ur0:tai/config.txt`).
+2. Download `EVE_Burst_Error_R_Vita_English_Patch_v1.6_data3_rePatch.zip` (~13 MB) from the [Releases](https://github.com/fiksr/eve-burst-error-r-vita-english-patch/releases) page.
+3. Copy the extracted `PCSG00817` folder directly to your Vita's `ux0:rePatch/` directory over USB or FTP:
+   `ux0:rePatch/PCSG00817/data/data3.psarc`
+4. Launch the game from LiveArea. `rePatch` will automatically load all 102 English scripts and localized UI textures over both the base game and official Update 1.03!
 
 ---
+
+### Method C: Vita3K & Standalone Archive Patching
 
 ## File Contents
 
