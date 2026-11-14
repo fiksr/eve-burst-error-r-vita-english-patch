@@ -2,11 +2,16 @@
 
 **Title ID:** `PCSG00817`  
 **Platform:** PlayStation Vita / Vita3K (Windows, Android, Linux, macOS, Steam Deck)  
-**Patch Version:** 1.6 (Side Change Confirmation Header & System Dialog Polish)
+**Patch Version:** 1.7 (Official Update 1.03 Compatibility & Lightweight data3.psarc)
 
 ---
 
 ## Changelog
+
+### v1.7
+- **Official Update 1.03 Full Compatibility:** Resolves the issue where installing official Update 1.03 (default on PKGi / PKGj) overrode the English script with Japanese dialogue files.
+- **Investigation Button Override (`90_update/cmd2_1`):** Injected localized English investigation sub-menu textures (`cmd2_1.png` + `cmd2_1.gxt` containing *Surroundings*, *Camera*, *Cash*, etc.) into the v1.03-exclusive `90_update/` directory so all buttons remain 100% in English on v1.03.
+- **Lightweight `data3.psarc` rePatch Release:** Distributed as a standalone ~14.9 MB `data3.psarc` archive. Real PS Vita users (`rePatch`) and Vita3K users can simply drop this single file in place without ever needing to extract, patch, or transfer the 1.1 GB base archive.
 
 ### v1.6
 - **Side Change Dialog Confirmation Header (`13_sys/dialog.png`):** Baked explicit English prompt header `[ SIDE CHANGE: SWITCH PROTAGONIST? ]` with glowing cyan accents directly onto the master dialog window. Resolves ambiguity during Kojiro $\leftrightarrow$ Marina route switches without requiring modifications to encrypted Sony executables.
