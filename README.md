@@ -2,11 +2,16 @@
 
 **Title ID:** `PCSG00817`  
 **Platform:** PlayStation Vita / Vita3K (Windows, Android, Linux, macOS, Steam Deck)  
-**Patch Version:** 1.7 (Official Update 1.03 Compatibility & Lightweight data3.psarc)
+**Patch Version:** 1.8 (100% Script Audit, Native `[n]`/`[w][h]` Formatting & Update 1.03 `data3.psarc`)
 
 ---
 
 ## Changelog
+
+### v1.8
+- **100% Scenario Dialogue Coverage:** Audited all 102 `.bin` scripts (`73,208` strings) and translated the 9 missed lines in Koujirou's opening (`a01.bin`), bringing translated dialogue to `44,574` lines (**0** untranslated non-menu, non-speaker dialogue lines remaining).
+- **Native Engine Formatting (`[n]` & `[w][h]`):** Switched from raw `\n` (which the Vita engine ignored, causing mid-word wraps) to native `[n]` line breaks, stripped leftover PC-98 inline `[Kojiroh]`/`[Name]` tags, and added automatic `[w080][h080]` / `[w070][h070]` / `[w065][h065]` scaling for long lines so text never clips at the bottom of the 2-line dialogue box.
+- **Clearer Installation Guide:** Separated **Update 1.03 (`data3.psarc`, recommended for almost all users)** from **Base Game v1.00 (`data.psarc`)**.
 
 ### v1.7
 - **Official Update 1.03 Full Compatibility:** Resolves the issue where installing official Update 1.03 (default on PKGi / PKGj) overrode the English script with Japanese dialogue files.
@@ -102,33 +107,44 @@ All dialogue, scenario text, menus, and choice buttons (`YES` / `NO`) are fully 
 
 ## Installation Guide
 
-### Method A: Vita3K (Windows / Android / Steam Deck)
-
-1. Copy `data.psarc` from your decrypted game folder (`.../PCSG00817/data/data.psarc`) into this patch folder.
-2. Run the patcher:
-   - **Windows:** Double-click `Apply_Patch.bat`
-   - **Linux / macOS / Steam Deck:** Run `./apply_patch.sh` or `python3 patcher.py data.psarc data_patched.psarc`
-3. In ~2 seconds, `data_patched.psarc` will be created.
-4. Rename `data_patched.psarc` to `data.psarc` and replace the original in your game's `data/` folder:
-   - **Vita3K (PC):** `<Vita3K-directory>/ux0/app/PCSG00817/data/data.psarc`
-   - **Vita3K (Android):** `/sdcard/Android/data/org.vita3k.emulator/files/vita/ux0/app/PCSG00817/data/data.psarc`
+> [!IMPORTANT]
+> **Which method should you use?**
+> Check your game's `ux0/app/PCSG00817/data/` folder (or Vita3K title version):
+> - **Do you have Official Update `1.03` installed (or a `data3.psarc` file)?** → Use **Method A (`data3.psarc`)**. Do **not** only patch `data.psarc`, or Update `1.03` will override it with Japanese!
+> - **Do you ONLY have Base Game `1.00` (no `data3.psarc`)?** → Use **Method B (`Apply_Patch.bat`)**.
 
 ---
 
-### Method B: Real PS Vita Hardware (Lightweight rePatch — Recommended)
+### Method A: Update 1.03 Users — Vita3K & Real PS Vita (`data3.psarc` — Recommended)
 
 > [!TIP]
-> **No 1.1 GB file transfer required! Fully compatible with official Update 1.03 (PKGi / PKGj).**
+> **No Python and no 1.1 GB file patching required!** Works on **Vita3K** and **Real PS Vita (`rePatch`)** with Official Update `1.03`.
 
-1. Ensure your PS Vita has custom firmware (HENkaku / Enso) with the **`rePatch`** plugin installed (`rePatch.skprx` in `ur0:tai/config.txt`).
-2. Download `EVE_Burst_Error_R_Vita_English_Patch_v1.6_data3_rePatch.zip` (~13 MB) from the [Releases](https://github.com/fiksr/eve-burst-error-r-vita-english-patch/releases) page.
-3. Copy the extracted `PCSG00817` folder directly to your Vita's `ux0:rePatch/` directory over USB or FTP:
-   `ux0:rePatch/PCSG00817/data/data3.psarc`
-4. Launch the game from LiveArea. `rePatch` will automatically load all 102 English scripts and localized UI textures over both the base game and official Update 1.03!
+1. Download `EVE_Burst_Error_R_Vita_English_Patch_v1.8_data3_rePatch.zip` (~15 MB) from the [Releases](https://github.com/fiksr/eve-burst-error-r-vita-english-patch/releases) page and extract it.
+2. Copy the `data3.psarc` file (`PCSG00817/data/data3.psarc`):
+   - **Vita3K (Windows / Linux / macOS / Steam Deck):** Copy `data3.psarc` into `<Vita3K-directory>/ux0/app/PCSG00817/data/data3.psarc` and **overwrite** the existing file.
+   - **Vita3K (Android):** Copy `data3.psarc` into `/sdcard/Android/data/org.vita3k.emulator/files/vita/ux0/app/PCSG00817/data/data3.psarc` and **overwrite**.
+   - **Real PS Vita (`rePatch`):** Ensure `rePatch.skprx` is enabled in `ur0:tai/config.txt`, then copy the extracted `PCSG00817` folder to `ux0:rePatch/PCSG00817/data/data3.psarc`.
+3. Launch the game. `data3.psarc` overrides both the base game and Update `1.03` with all 102 English scripts and localized UI textures.
 
 ---
 
-### Method C: Vita3K & Standalone Archive Patching
+### Method B: Base Game v1.00 ONLY (No Update 1.03 Installed)
+
+1. Download `EVE_Burst_Error_R_Vita_English_Patch_v1.8.zip` and extract it.
+2. Copy `data.psarc` (1.1 GB) from your decrypted game folder (`.../PCSG00817/data/data.psarc`) into the extracted patch folder.
+3. Run the patcher:
+   - **Windows:** Double-click `Apply_Patch.bat`
+   - **Linux / macOS / Steam Deck:** Run `./apply_patch.sh` or `python3 patcher.py data.psarc data_patched.psarc`
+4. In ~2 seconds, `data_patched.psarc` will be created.
+5. Rename `data_patched.psarc` to `data.psarc` and replace the original in your game's `data/` folder:
+   - **Vita3K (PC):** `<Vita3K-directory>/ux0/app/PCSG00817/data/data.psarc`
+   - **Vita3K (Android):** `/sdcard/Android/data/org.vita3k.emulator/files/vita/ux0/app/PCSG00817/data/data.psarc`
+   - **Real PS Vita (`rePatch`):** `ux0:rePatch/PCSG00817/data/data.psarc`
+
+*(Note: If you later install Official Update `1.03`, also copy `data3.psarc` from Method A so `1.03` stays in English.)*
+
+---
 
 ## File Contents
 

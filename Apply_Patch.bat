@@ -53,6 +53,12 @@ if %errorlevel% equ 0 (
     echo 2. Real PS Vita: Copy "data_patched.psarc" as "data.psarc" into
     echo    ux0:rePatch/PCSG00817/data/data.psarc (requires rePatch plugin).
     echo.
+    echo [IMPORTANT - Update 1.03 Users]
+    echo If your game has Official Update 1.03 installed (a "data3.psarc" file
+    echo exists in your data/ folder), Update 1.03 will override data.psarc!
+    echo Download the lightweight "_data3_rePatch.zip" and copy data3.psarc
+    echo instead (no Apply_Patch.bat needed).
+    echo.
 ) else (
     echo.
     echo [!] Patching encountered an error. Please review the output above.
