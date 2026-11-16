@@ -2,11 +2,15 @@
 
 **Title ID:** `PCSG00817`  
 **Platform:** PlayStation Vita / Vita3K (Windows, Android, Linux, macOS, Steam Deck)  
-**Patch Version:** 1.9 (Empty-String Softlock Fix for Glen's Phone Call & Terminal Sequences)
+**Patch Version:** 1.9.1 (Unclosed Bracket Cleanup & Terminal Control-Tag Preservation)
 
 ---
 
 ## Changelog
+
+### v1.9.1
+- **Fixed Unclosed & Non-Engine `[...]` Brackets:** Cleaned up `a011_2.bin` (`[Kojiroh)` unclosed bracket), `a001_4.bin` (`Note: [...]` rough bracket notes), and converted `[μ-101]` to `(μ-101)` (`0` unclosed or unknown brackets remaining across all `102` `.bin` scripts).
+- **Preserved Terminal Control Tags (`[@]`, `[w095][h095]`, `[cff6000]`):** Preserved leading engine auto-advance and color tags on terminal hacking sequences (`a001_6.bin`, `a001_7.bin`, `b022_4.bin`).
 
 ### v1.9
 - **Fixed Softlock During Glen's Phone Call (`a001.bin`):** Fixed a bug where line `953` (`《スピーカーから流れる音声と、直接受話器へ届く肉声では、》`) was saved wrapped in square brackets `[...]` and stripped down to an empty string `""`, causing the dialogue box to go blank and freeze until switching to Marina's side.
