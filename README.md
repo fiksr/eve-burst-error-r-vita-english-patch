@@ -2,11 +2,15 @@
 
 **Title ID:** `PCSG00817`  
 **Platform:** PlayStation Vita / Vita3K (Windows, Android, Linux, macOS, Steam Deck)  
-**Patch Version:** 1.8 (100% Script Audit, Native `[n]`/`[w][h]` Formatting & Update 1.03 `data3.psarc`)
+**Patch Version:** 1.9 (Empty-String Softlock Fix for Glen's Phone Call & Terminal Sequences)
 
 ---
 
 ## Changelog
+
+### v1.9
+- **Fixed Softlock During Glen's Phone Call (`a001.bin`):** Fixed a bug where line `953` (`《スピーカーから流れる音声と、直接受話器へ届く肉声では、》`) was saved wrapped in square brackets `[...]` and stripped down to an empty string `""`, causing the dialogue box to go blank and freeze until switching to Marina's side.
+- **Zero Empty-String Regressions (`110` Fixed):** Updated `_strip_pc98_speaker_tags()` so `[...]` stripping can never leave a non-empty line blank, skipped empty `""` entries during translation-memory lookup, and preserved terminal typing animation strings (`a001_6.bin`, `b022_4.bin`) plus `a001_7.bin` line `1026`. Audited all `102` `.bin` scripts (`0` empty-string regressions remaining).
 
 ### v1.8
 - **100% Scenario Dialogue Coverage:** Audited all 102 `.bin` scripts (`73,208` strings) and translated the 9 missed lines in Koujirou's opening (`a01.bin`), bringing translated dialogue to `44,574` lines (**0** untranslated non-menu, non-speaker dialogue lines remaining).
